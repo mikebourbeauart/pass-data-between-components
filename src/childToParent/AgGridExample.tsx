@@ -26,10 +26,10 @@ export function CarsGrid({ childToParent }: any) {
   const onSelectionChangedHandler = (event: any) => {
     if (gridRef.current) {
       let selectedNode = gridRef.current.api.getSelectedNodes()[0];
-      console.log(selectedNode);
+      console.log("selectedNode", selectedNode);
       if (selectedNode && selectedNode) {
-        console.log("classesSelectionNodeDataId", selectedNode.data.id);
-        childToParent(selectedNode ? selectedNode.data.make : null);
+        console.log("selectionChangeData", selectedNode.data);
+        childToParent(selectedNode ? selectedNode.id : null);
       }
     }
   };
