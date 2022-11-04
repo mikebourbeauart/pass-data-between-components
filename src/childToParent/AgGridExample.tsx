@@ -38,11 +38,11 @@ export function CarsGrid({ childToParent }: any) {
     <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
       <AgGridReact
         ref={gridRef}
-        defaultColDef={{ sortable: true, filter: true }}
-        pagination={true}
         rowData={rowData}
         columnDefs={colDefs}
+        pagination={true}
         rowSelection="single"
+        defaultColDef={{ sortable: true, filter: true }}
         onSelectionChanged={onSelectionChangedHandler}
       ></AgGridReact>
     </div>
